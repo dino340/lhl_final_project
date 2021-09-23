@@ -1,3 +1,6 @@
+#Data folders for final project
+data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
