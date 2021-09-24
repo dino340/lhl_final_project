@@ -1,5 +1,6 @@
 #Data folders for final project
 data/
+split/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
