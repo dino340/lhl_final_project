@@ -1,7 +1,8 @@
 #Data folders for final project
 data/
 split/
-Old Model/
+Scratch Model/
+VGG16 Model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
