@@ -12,6 +12,10 @@ from streamlit_webrtc import (
     webrtc_streamer,
 )
 
+RTC_CONFIGURATION = RTCConfiguration(
+    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+)
+
 st.write("""
 # Facemask detector
 This application was created by Garrett Brezsnyak for my capstone project for Lighthouse Labs Data Science Program.
