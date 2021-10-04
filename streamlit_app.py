@@ -57,7 +57,8 @@ while run:
         async_processing=True
     )
     im = webcam
-    im=cv2.flip(im,1)  # mirror image horizontally
+    
+#     im=cv2.flip(im,1)  # mirror image horizontally
     im_color= im      # cv2.cvtColor(im, cv2.COLOR_BGR2RGB)  # color correct image for predictions to RGB
     im_color2= im    # cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
     
