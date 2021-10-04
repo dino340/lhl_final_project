@@ -4,7 +4,13 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Model, load_model
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer
+from streamlit_webrtc import (
+    AudioProcessorBase,
+    RTCConfiguration,
+    VideoProcessorBase,
+    WebRtcMode,
+    webrtc_streamer,
+)
 
 st.write("""
 # Facemask detector
@@ -36,7 +42,13 @@ size = 1
 
 # begin a loop for webcam capture and face detection
 while run:
-    webcam = webrtc_streamer(key='example')
+    webcam = webrtc_streamer(
+        key='mask-detection',
+        mode=WebRtcMode.SENDRECV,
+        rtc_configuration=RTC_CONFIGURATION,
+        video_processor_factory=MobileNetSSDVideoProcessor,
+        async_processing=True
+    )
     im = webcam
     im=cv2.flip(im,1)  # mirror image horizontally
     im_color= im      # cv2.cvtColor(im, cv2.COLOR_BGR2RGB)  # color correct image for predictions to RGB
