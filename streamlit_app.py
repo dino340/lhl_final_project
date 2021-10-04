@@ -16,6 +16,9 @@ RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
 
+class VideoProcessor(VideoProcessorBase):
+    delay = DEFAULT_DELAY
+
 st.write("""
 # Facemask detector
 This application was created by Garrett Brezsnyak for my capstone project for Lighthouse Labs Data Science Program.
@@ -50,7 +53,7 @@ while run:
         key='mask-detection',
         mode=WebRtcMode.SENDRECV,
         rtc_configuration=RTC_CONFIGURATION,
-        video_processor_factory=MobileNetSSDVideoProcessor,
+        video_processor_factory=VideoProcessor,
         async_processing=True
     )
     im = webcam
