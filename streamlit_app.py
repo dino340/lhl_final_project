@@ -4,6 +4,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Model, load_model
 import streamlit as st
+<<<<<<< HEAD
 from streamlit_webrtc import (
     AudioProcessorBase,
     RTCConfiguration,
@@ -18,6 +19,8 @@ RTC_CONFIGURATION = RTCConfiguration(
 
 class VideoProcessor(VideoProcessorBase):
     delay = DEFAULT_DELAY
+=======
+>>>>>>> parent of 60749ca (update to streamlit-webrtc)
 
 st.write("""
 # Facemask detector
@@ -46,9 +49,11 @@ FRAME_WINDOW = st.image([])
 
 # start webcam capture and set size for downscaling webcam image
 size = 1
+webcam = cv2.VideoCapture(0)
 
 # begin a loop for webcam capture and face detection
 while run:
+<<<<<<< HEAD
     webcam = webrtc_streamer(
         key='mask-detection',
         mode=WebRtcMode.SENDRECV,
@@ -61,6 +66,12 @@ while run:
 #     im=cv2.flip(im,1)  # mirror image horizontally
     im_color= im      # cv2.cvtColor(im, cv2.COLOR_BGR2RGB)  # color correct image for predictions to RGB
     im_color2= im    # cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+=======
+    (rval, im) = webcam.read()  # read images from camera
+    im=cv2.flip(im,1)  # mirror image horizontally
+    im_color=cv2.cvtColor(im, cv2.COLOR_BGR2RGB)  # color correct image for predictions to RGB
+    im_color2=cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+>>>>>>> parent of 60749ca (update to streamlit-webrtc)
     
     mini = cv2.resize(im_color, (im_color.shape[1] // size, im_color.shape[0] // size))  # resize image 
     
