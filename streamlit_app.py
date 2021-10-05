@@ -17,7 +17,7 @@ RTC_CONFIGURATION = RTCConfiguration(
 )
 
 class VideoProcessor(VideoProcessorBase):
-    pass
+    delay = DEFAULT_DELAY
 
 st.write("""
 # Facemask detector
