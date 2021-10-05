@@ -4,6 +4,7 @@ split/
 Scratch Model/
 VGG16 Model/
 resnet model/
+model-004.model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

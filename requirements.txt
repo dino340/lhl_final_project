@@ -1,12 +1,10 @@
-numpy
-tensorflow
-<<<<<<< HEAD
-<<<<<<< HEAD
-opencv-python-headless==4.5.3.56
-streamlit-webrtc
-=======
-opencv-python
->>>>>>> parent of b707d04 (modified opencv package in requirements)
-=======
-opencv-python-headless==4.5.3.56
->>>>>>> parent of 60749ca (update to streamlit-webrtc)
+python==3.9.7
+
+numpy==1.19.5
+tensorflow==2.6.0
+opencv-python==4.5.3
+streamlit==0.89.0
+matplotlib==3.4.3
+seaborn==0.11.2
+pandas==1.3.2
+sklearn==0.24.2

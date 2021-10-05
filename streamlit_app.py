@@ -7,10 +7,15 @@ import streamlit as st
 
 st.write("""
 # Facemask detector
+
 This application was created by Garrett Brezsnyak for my capstone project for Lighthouse Labs Data Science Program.
+
 It utilizes a CNN model based on VGG16 trained using images from the FFHQ dataset and from MaskedFace-Net.
+
 FFHQ dataset: https://www.kaggle.com/arnaud58/flickrfaceshq-dataset-ffhq
-MaskedFace-Net: https://github.com/cabani/MaskedFace-Net""")
+
+MaskedFace-Net: https://github.com/cabani/MaskedFace-Net
+""")
 
 # Load most successful model from disk
 model = load_model('model-004.model')
@@ -27,12 +32,13 @@ st.title("Facemask Feed")
 run = st.checkbox('Run, may take a minute to initialize camera')
 FRAME_WINDOW = st.image([])
 
-# start webcam capture and set size for downscaling webcam image
-size = 1
-webcam = cv2.VideoCapture(0)
+
 
 # begin a loop for webcam capture and face detection
 while run:
+    # start webcam capture and set size for downscaling webcam image
+    size = 1
+    webcam = cv2.VideoCapture(0)
     (rval, im) = webcam.read()  # read images from camera
     im=cv2.flip(im,1)  # mirror image horizontally
     im_color=cv2.cvtColor(im, cv2.COLOR_BGR2RGB)  # color correct image for predictions to RGB
