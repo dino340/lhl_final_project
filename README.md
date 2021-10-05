@@ -7,7 +7,7 @@ In order for them to be effective they need to not only be worn but also worn pr
 
 I decided to create and train a model that classifies images of people based on their mask status to differentiate which are wearing masks properly, improperly or not at all.
 
-This application was created by Garrett Brezsnyak for my capstone project for Lighthouse Labs Data Science Program.
+This was created by Garrett Brezsnyak for my capstone project for Lighthouse Labs Data Science Program.
 
 It utilizes a CNN model based on VGG16 trained using images from the FFHQ dataset and from MaskedFace-Net.
 
