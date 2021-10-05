@@ -12,13 +12,14 @@ This application was created by Garrett Brezsnyak for my capstone project for Li
 It utilizes a CNN model based on VGG16 trained using images from the FFHQ dataset and from MaskedFace-Net.
 
 ## Video demo of model in action
-https://youtu.be/f9SQTKOc204
+![mask classifier gif](https://user-images.githubusercontent.com/30278033/136102353-bf83a7f8-19ac-494d-a2bd-087e9610da75.gif)
 
 ## Metrics for final version of model
+### Confusion Matrix
 ![confusionmatrix](https://user-images.githubusercontent.com/30278033/136100821-753dc9b4-52e8-4b8f-ac6f-ee24e63da075.png)
-
+### Model Accuracy
 ![model_acc](https://user-images.githubusercontent.com/30278033/136100833-3fe37747-87af-4c2d-8ccd-837d80db0b21.png)
-
+### Model Loss
 ![model_loss](https://user-images.githubusercontent.com/30278033/136100889-4961a70d-985b-44f6-b3ce-71e51f815fe6.png)
 
 
